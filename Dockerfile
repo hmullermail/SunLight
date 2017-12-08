@@ -2,7 +2,7 @@ FROM resin/%%RESIN_MACHINE_NAME%%-python
 
 
 # Set our working directory
-WORKDIR /usr/src/app
+#WORKDIR /usr/src/app
 
 
 
@@ -13,7 +13,7 @@ WORKDIR /usr/src/app
 #RUN pip install -r /requirements.txt
 
 # This will copy all files in our root to the working  directory in the container
-COPY . ./
+#COPY . ./
 
 # switch on systemd init system in container
 #ENV INITSYSTEM on
@@ -29,7 +29,7 @@ COPY . ./
 #RUN apt-get update && apt-get install -y python python-pip python-dev && apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN pip install RPi.GPIO
 
-#COPY . /app
+COPY . /app
 
 # Start blink app
 CMD ["python", "/app/ldr_muller_mod.py"]
