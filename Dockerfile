@@ -1,4 +1,5 @@
-FROM resin/rpi-raspbian:latest
+FROM resin/%%RESIN_MACHINE_NAME%%-python
+
 
 # Install Python.
 RUN apt-get update && apt-get install -y python python-pip python-dev && apt-get clean && rm -rf /var/lib/apt/lists/*
