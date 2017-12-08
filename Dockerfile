@@ -16,7 +16,7 @@ WORKDIR /usr/src/app
 COPY . ./
 
 # switch on systemd init system in container
-ENV INITSYSTEM on
+#ENV INITSYSTEM on
 
 # main.py will run when container starts up on the device
 #CMD ["python","src/main.py"]
